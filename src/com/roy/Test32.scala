@@ -2,21 +2,19 @@ package com.roy
 
 /**
  * map
- * @author Administrator
+ * @author Roy Ren
  */
 object Test32 {
   def main(args: Array[String]): Unit = {
-    //(zhangsan,15000)键值对，也叫作对偶，用（）
+    //(zhangsan,15000)Key-value
     var map1 = Map[String,Int]("zhangsan"->15000,"lisi"->16000,"wangwu"->9000)
     var map2 = Map[String,Int](("zhangsan",15000),("lisi"->16000),"wangwu"->9000)
 //    for(i <- map2){
 //      println(i)
 //    }
-    
-    //增强代码健壮性
 /*    if(map1.contains("zhaoliu"))
     println(map1("zhaoliu"))
-    println(map1.getOrElse("zhangsan", "无"))  //scala写法
+    println(map1.getOrElse("zhangsan", "none"))
 */    
     
 //    for(i <- map2.keys){
@@ -26,7 +24,7 @@ object Test32 {
 //      println(k + "-->" + v)
 //    }
     
-    //k,v互换
+    //k,v exchange
     var map3 = for((k,v) <- map2)yield((v,k))
 //    println(map3)
     
